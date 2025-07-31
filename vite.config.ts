@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: './', // This ensures relative paths for GitHub Pages
+  plugins: [react(), visualizer()],
+  base: '/vite-react-website/', // GitHub Pages repository name
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
